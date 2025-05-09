@@ -66,7 +66,10 @@ export default function Search() {
 
           {query && results.length > 0 && selectedFixture && (
             <div className={styles.fixtureDetails}>
-              <h3>Fixture Details</h3>
+            <div className={styles.fixtureDetailsHeader}>
+              Fixture Details
+                <button onClick={() => setSelectedFixture(null)} className={styles.closeButton}>&times;</button>
+            </div>
               <p><strong>Season:</strong> {selectedFixture.season}</p>
               <p><strong>Competition:</strong> {selectedFixture.competition_name}</p>
               <p><strong>Round:</strong> {selectedFixture.fixture_round}</p>
