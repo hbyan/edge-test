@@ -10,8 +10,6 @@ export const config = {
 };
 
 const uri = process.env.MONGODB_URI;
-//const uri = 'mongodb://hbyan0321:XP3ydt42ebU2uWSQ@ac-as75lq2-shard-00-00.ya3ucfl.mongodb.net:27017,ac-as75lq2-shard-00-01.ya3ucfl.mongodb.net:27017,ac-as75lq2-shard-00-02.ya3ucfl.mongodb.net:27017/fixtures?ssl=true&replicaSet=atlas-147x4c-shard-0&authSource=admin&retryWrites=true&w=majority';
-
 const dbName = 'fixtures';
 const collectionName = 'uploads';
 
