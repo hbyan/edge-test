@@ -28,3 +28,8 @@ npm run dev
 Open http://localhost:3000 in your browser to view the app, starting with the file uploader.
 
 Open http://localhost:3000/search in your browser to search and view the teams with details.
+
+### 5. Public access
+You can access the deployed version of the app hosted on Vercel here:
+- Home Page (upload csv):https://edge-test-five.vercel.app/
+- Search Page: https://edge-test-five.vercel.app/search
