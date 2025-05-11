@@ -20,12 +20,25 @@ export default async function handler(req, res) {
     const db = client.db(dbName);
     const collection = db.collection(collectionName);
 
-    const fixtures = await collection.find({
+    const fixtures = await collection.aggregate([
+      {
+        $match: {
           $or: [
             { home_team: { $regex: query, $options: 'i' } },
-            { away_team: { $regex: query, $options: 'i' } },
+            { away_team: { $regex: query, $options: 'i' } }
           ]
-        }).toArray();
+        }
+      },
+      {
+        $group: {
+          _id: "$fixture_mid",
+          doc: { $first: "$$ROOT" }
+        }
+      },
+      {
+        $replaceRoot: { newRoot: "$doc" }
+      }
+    ]).toArray();
 
     res.status(200).json(fixtures);
   } catch (error) {
