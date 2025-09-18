@@ -21,7 +21,7 @@ Create a .env.local file in the root directory and add the following line:
 
 MONGODB_URI=<your MongoDB connection string here>
 
-* Note: You will receive the MongoDB connection string via email.
+* Note: You will receive the MongoDB connection string via email upon your request.
 
 ### 4. Run the development server
 npm run dev
@@ -32,4 +32,4 @@ Open http://localhost:3000/search in your browser to search and view the teams w
 ### 5. Public access
 You can access the deployed version of the app hosted on Vercel here:
 - Home Page (upload csv):https://edge-test-five.vercel.app/
-- Search Page: https://edge-test-five.vercel.app/search
+- Search Page: https://edge-test-five.vercel.app/search (for example: you can type "high" to see the listings)
